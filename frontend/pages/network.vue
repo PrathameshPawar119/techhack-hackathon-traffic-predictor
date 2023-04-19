@@ -52,7 +52,6 @@ watch(data, ()=>{
 watch(reactiveQuery, ()=>{
   refresh();
 })
-
 </script>
 <style scoped>
 /* .headline{
