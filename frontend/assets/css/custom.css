@@ -1,0 +1,41 @@
+.v-main {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s 0.1s ease-in-out;
+}
+
+p a:hover {
+    color: #6ee7b7;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0f000c;
+    /* border-left: 1px solid #dadada; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(115, 115, 115, 0.3);
+    /* border: solid 1px #525252; */
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(217, 70, 239, 0.8);
+}
+
+.card-glass {
+    background-color: rgba(65, 34, 138, 0.55) !important;
+    backdrop-filter: blur(8px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
+}
