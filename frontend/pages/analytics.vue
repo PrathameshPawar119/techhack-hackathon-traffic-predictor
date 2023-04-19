@@ -103,16 +103,16 @@ async function predict()
 
 function chechVolume(inp) {
     if (inp < 10 && inp > 0) {
-        volume.value = 'Not conjusted';
+        volume.value = 'Not congested';
     }
     if (inp < 20 && inp > 10) {
-        volume.value = 'Less conjusted';
+        volume.value = 'Less congested';
     }
     if (inp < 30 && inp > 20) {
-        volume.value = 'Medium conjusted';
+        volume.value = 'Medium congested';
     }
     if (inp < 40 && inp > 30) {
-        volume.value = 'Highly conjusted';
+        volume.value = 'Highly congested';
     }
 
     return volume.value;
