@@ -20,8 +20,9 @@
                 location="right"
                 temporary
               >
-                <v-divider></v-divider>
-                <v-list density="compact" nav>
+              <v-divider></v-divider>
+
+              <v-list density="compact" nav>
                     <div v-for="(item, i) in filters" :key="i">
                         <v-list-item style="text-align: start;" :prepend-icon="item.icon" :title="item.name" :value="item.name"></v-list-item>
                     </div>
