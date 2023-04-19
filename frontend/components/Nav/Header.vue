@@ -37,7 +37,6 @@
                 align-tabs="center"
                 class="d-none d-sm-flex"
             ><v-row justify-md="center" align="center">
-              <Location />
               <div v-for="(item, i) in tabs" :key="i">
                   <NuxtLink :to="item.href">
                       <v-tab :prepend-icon="item.icon" :value="i">
@@ -48,6 +47,9 @@
             </v-row>
             </v-tabs>
             <v-spacer></v-spacer>
+            <v-btn variant="tonal" style="background-color: red;">
+              Alert
+            </v-btn>
             <section v-if="auth.loggedIn==false && userfetch == true" class="mx-3">
               <NuxtLink to="/auth/sign-in">
                 <v-btn variant="tonal" color="white">
@@ -84,37 +86,6 @@
                     </v-list>
                 </v-menu>
 
-                <!-- Notofication extension menu -->
-                <v-menu
-                    v-model="notificationPanel"
-                    location="end"
-                    transition="scale-transition"
-                >
-                    <template v-slot:activator="{ props }">
-                        <v-btn icon v-bind="props" >
-                            <v-icon icon="$notification"></v-icon>
-                        </v-btn>
-                    </template>
-                    <v-card min-width="300">
-                        <v-list>
-                            <v-list-item v-for="item in notifications" :key="item.href" :prepend-icon="item.icon" :title="item.title" :value="item.tag">
-                            </v-list-item>
-                        </v-list>
-                        <v-card-actions>
-                        <v-divider></v-divider>
-                            <v-btn
-                                variant="text"
-                                @click="notificationPanel = false"
-                            >
-                                Close
-                            </v-btn>
-                        </v-card-actions>
-                    </v-card>
-                    </v-menu>
-                
-                <v-btn icon>
-                  <v-icon icon="$message"></v-icon>
-                </v-btn>
             </section>
     
           </v-app-bar>
@@ -122,13 +93,10 @@
 </template>
 
 <script setup>
-import {useCitiesStore} from '@/stores/cities';
-import { storeToRefs } from 'pinia';
 const drawer = ref(false);
 const notificationPanel = ref(false);
 
 const {$auth: auth, $sanctumAuth} = useNuxtApp();
-const citiesStore = useCitiesStore();
 
 // const props = defineProps({
 //     offsetTop: {
@@ -147,6 +115,7 @@ async function user(){
     console.log(error);
   }
 }
+user()
 
 const tabs = [
     {
@@ -215,9 +184,7 @@ const tabs = [
     })
   }
 
-  onMounted(()=>{
-    user(),
-    citiesStore.setCities();
-  })
+
+  console.log("logged in", auth.loggedIn);
 
 </script>
