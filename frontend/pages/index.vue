@@ -146,11 +146,12 @@ useHead({
     /* position: fixed; */
   }
 
-@media (max-width: 660px){
+@media (max-width: 700px){
   .grid{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    
   }
 
   .rightSection, .leftSection{
