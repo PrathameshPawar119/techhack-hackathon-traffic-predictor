@@ -5,7 +5,7 @@
                 <v-card class="mx-auto rounded-xl" elevation="4" variant="outlined">
                     <div class="ma-4 rounded-xl py-3">
                         <v-card-title>
-                            <h1 class="ma-3" style="font-size:54px">Shramik</h1>
+                            <h1 class="ma-3" style="font-size:54px">Smart Vahtuk</h1>
                         </v-card-title>
                         <v-card-subtitle>
                             <h2 class="text-body-1 mb-3">We make your work done, sign-in!</h2>

@@ -29,7 +29,7 @@
             </template>
             
             <v-app-bar-title>
-                <NuxtLink to="/" class="text-decoration-none"><b>Shramik</b></NuxtLink>
+                <NuxtLink to="/" class="text-decoration-none"><b>Smart Vahtuk</b></NuxtLink>
             </v-app-bar-title>
                     <!-- Navigation Tabs top tabs -->
             <v-tabs
