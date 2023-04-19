@@ -155,16 +155,10 @@ const tabs = [
         icon: '$home',
     },
     {
-        name: "Network",
+        name: "Analytics",
         description: "Learn how to maximize our platform to get the most out of it.",
-        href: "/network",
+        href: "/analytics",
         icon: '$group',
-    },
-    {
-        name: "WorkPlace",
-        description: "See what meet-ups and other events we might be planning near you.",
-        href: "/workplace",
-        icon: '$jobs',
     },
   ]
 
