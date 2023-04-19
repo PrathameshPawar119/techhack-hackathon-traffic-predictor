@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-
+// the following is the layout of the page
 // const route = useRoute();
 
 // const { $auth: auth, $sanctumAuth } = useNuxtApp();
