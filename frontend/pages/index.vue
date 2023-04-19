@@ -146,7 +146,7 @@ useHead({
     /* position: fixed; */
   }
 
-@media screen and (max-width: 660px){
+@media (max-width: 660px){
   .grid{
     display: grid;
     grid-template-columns: 1fr;
