@@ -65,7 +65,7 @@ class AuthController extends Controller
             'email' => 'required|email|unique:customers,email|max:100',
             'password' => 'required',
             'c_password' => 'required|same:password',
-            'contact' => 'nullable|numeric|min:10|max:15|unique:customers,contact'
+            'contact' => 'nullable|numeric|min_digits:10|max_digits:15|unique:customers,contact'
         ]);
         // dd($validator);
         // $validator = $validator->safe()->only(['name', 'email', 'password', 'c_password', 'contact']);
