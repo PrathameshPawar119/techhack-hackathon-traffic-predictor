@@ -4,7 +4,9 @@
         <loading message="Loadng Posts..." />
       </section>
       <section v-else>
-        <div class="displaySection">
+   
+      </section>
+      <div class="displaySection">
           <div class="rightSection d-none d-sm-flex">
             okok
           </div>
@@ -27,7 +29,6 @@
               </v-navigation-drawer>
           </div>
         </div>
-      </section>
     </v-container>
 </template>
 
@@ -47,40 +48,8 @@ useHead({
   title:"Home"
 })
 
-const filters = [
-  {
-    'name':'Latest',
-    'icon':'$flash',
-    'slug':'posts/latest'
-  },
-    {
-    'name':'Popular',
-    'icon':'$flash',
-    'slug':'posts/popular'
-  },
-]
 
-const posts = ref(null);
-const {pending, data, error, refresh } = await useFetchApi("posts/popular", {
-  lazy:true,
-  query:{page: 1}
-})
 
-// onMounted(() => { 
-//   console.log(defaultCity);
-//   if (defaultCity.value) {
-//     navigateTo(`/${defaultCity.value}/city`);
-//   }
-// });
-
-watch(data,()=>{
-  posts.value = data.value.data.data
-  console.log(posts.value);
-})
-
-watch( reactiveQuery ,()=>{
-  refresh();
-})
 
 </script>
 
