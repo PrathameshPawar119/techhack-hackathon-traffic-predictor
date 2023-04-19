@@ -147,10 +147,10 @@ useHead({
   }
 
 @media screen and (max-width: 660px){
-  .displaySection{
-    /* display: grid;
+  .grid{
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr; */
+    grid-template-rows: 1fr;
   }
 
   .rightSection, .leftSection{
